@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/zbohm/email-embed-images.svg?branch=master)](https://travis-ci.org/zbohm/email-embed-images)
+[![Coverage](https://codecov.io/gh/zbohm/email-embed-images/branch/master/graph/badge.svg)](https://codecov.io/gh/zbohm/email-embed-images)
 
 # Email embed images
 
