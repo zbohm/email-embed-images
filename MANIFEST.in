@@ -1,0 +1,3 @@
+graft email_embed_images
+include README.md images
+global-exclude *.py[co]
