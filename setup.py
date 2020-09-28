@@ -31,7 +31,7 @@ setup(
     ),
     extras_require={
         'quality': ['isort', 'flake8', 'pydocstyle', 'mypy'],
-        'test': ['pyfakefs', 'requests_mock']
+        'test': ['pyfakefs', 'requests_mock', 'tox']
     },
     packages=find_packages(),
     include_package_data=True,

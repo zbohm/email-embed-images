@@ -34,6 +34,8 @@ Web logo: python-logo-generic.svg
 # Prepare HTML part of mail. This part is optional.
 # Example embed local file `python-logo.png` from subfolder `images`
 # and logo `python-logo-generic.svg` from url on `www.python.org`.
+# Download from https://www.python.org/static/img/python-logo.png
+# and https://www.python.org/static/community_logos/python-logo-generic.svg.
 body_html = """
 <body>
     <p>
@@ -91,7 +93,12 @@ send_mail(subject, body_text, from_email, recipient_list, html_message=body_html
 ### Run tests
 
 ```
+virtualenv env
+source env/bin/activate
+pip install -e git+https://github.com/zbohm/email-embed-images.git#egg=email-embed-images[quality,test]
+cd env/src/email-embed-images/
 tox --skip-missing-interpreters
+deactivate
 ```
 
 The project is licensed under [BSD 3-Clause License](LICENSE).
