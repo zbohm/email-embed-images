@@ -27,13 +27,13 @@ def create_mail(
     msg = EmailMessage()
     msg['Subject'] = subject
     msg['From'] = from_email
-    msg['To'] = COMMASPACE.join(recievers)
+    msg['To'] = COMMASPACE.join([str(item) for item in recievers])
     if cc is not None:
-        msg['Cc'] = COMMASPACE.join(cc)
+        msg['Cc'] = COMMASPACE.join([str(item) for item in cc])
     if bcc is not None:
-        msg['Bcc'] = COMMASPACE.join(bcc)
+        msg['Bcc'] = COMMASPACE.join([str(item) for item in bcc])
     if reply_to is not None:
-        msg['Reply-To'] = COMMASPACE.join(reply_to)
+        msg['Reply-To'] = COMMASPACE.join([str(item) for item in reply_to])
     if headers is not None:
         for name, value in headers:
             msg[name] = value
