@@ -90,15 +90,17 @@ from email_embed_images.support_for_django import send_mail
 send_mail(subject, body_text, from_email, recipient_list, html_message=body_html)
 ```
 
-### Run tests
+### Testing
+
+Project has a test suite, powered by tox. To run it, type this:
 
 ```
-virtualenv env
-source env/bin/activate
-pip install -e git+https://github.com/zbohm/email-embed-images.git#egg=email-embed-images[quality,test]
-cd env/src/email-embed-images/
-tox --skip-missing-interpreters
-deactivate
+$ virtualenv --python=/usr/bin/python3 env
+$ source env/bin/activate
+(env) $ pip install -e git+https://github.com/zbohm/email-embed-images.git#egg=email-embed-images[quality,test]
+(env) $ cd env/src/email-embed-images/
+(env) $ tox --skip-missing-interpreters
+$ deactivate
 ```
 
 The project is licensed under [BSD 3-Clause License](LICENSE).
