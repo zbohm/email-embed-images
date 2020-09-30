@@ -99,7 +99,7 @@ $ virtualenv --python=/usr/bin/python3 env
 $ source env/bin/activate
 (env) $ pip install -e git+https://github.com/zbohm/email-embed-images.git#egg=email-embed-images[quality,test]
 (env) $ cd env/src/email-embed-images/
-(env) $ tox --skip-missing-interpreters
+(env) $ tox
 $ deactivate
 ```
 
